@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Politički kompas Srbije: Prvi test po vrednostima Srba i Srbije</title>
+<style>
+:root{--navy:#08284d;--blue:#0b477f;--red:#d8323a;--pale:#eef5fb;--ink:#132f4f;--muted:#61758a;--line:#d3e0ec;--white:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(145deg,#e9f1f8,#f8fbfe 55%,#e7eff7);color:var(--ink);min-height:100vh}
+button{font:inherit;cursor:pointer}.shell{max-width:900px;margin:0 auto;padding:24px 16px 48px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--navy);color:white;padding:15px 20px;border-radius:16px 16px 0 0}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.1px}.compass{display:grid;place-items:center;width:34px;height:34px;border:2px solid #fff;border-radius:50%;font-size:22px}.pill{font-size:12px;border:1px solid #ffffff55;padding:6px 10px;border-radius:999px;color:#e7f2ff;white-space:nowrap}.panel{background:white;border:1px solid var(--line);border-top:0;padding:clamp(22px,5vw,42px);box-shadow:0 16px 50px #0b31500d;border-radius:0 0 16px 16px}.hero{background:linear-gradient(135deg,#06264a,#0c477c);color:white;border-radius:16px;padding:clamp(26px,6vw,52px);position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;right:4%;top:0;font-size:190px;color:#ffffff0c;transform:rotate(18deg)}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;color:#f4b7ba}.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.02;margin:14px 0}.hero p{max-width:620px;line-height:1.7;color:#e0edf9}.meta{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.meta span{border:1px solid #ffffff36;background:#ffffff0d;border-radius:10px;padding:10px 12px;font-size:13px}.btn{border:0;border-radius:10px;padding:13px 18px;font-weight:750;transition:.15s}.btn-primary{background:var(--red);color:white;box-shadow:0 6px 15px #d8323a30}.btn-primary:hover{background:#bd2630;transform:translateY(-1px)}.btn-secondary{background:#e5edf5;color:var(--navy)}.btn-secondary:hover{background:#d5e3f0}.btn:disabled{opacity:.38;cursor:not-allowed;transform:none}.disclaimer{font-size:12px;color:#d6e6f5;margin-top:22px;line-height:1.6}.progress-wrap{margin-bottom:28px}.progress-line{height:8px;background:#e3edf6;border-radius:99px;overflow:hidden;margin-top:14px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--red),#ef6b6e);transition:width .25s}.question-number{color:var(--red);font-size:13px;font-weight:850;text-transform:uppercase;letter-spacing:1.2px}.question-title{font-size:clamp(23px,4vw,31px);line-height:1.25;margin:10px 0 24px}.options{display:grid;gap:11px}.option{display:flex;align-items:flex-start;gap:12px;padding:15px;border:1px solid var(--line);border-radius:11px;background:#fff;text-align:left;color:var(--ink);line-height:1.45;width:100%;transition:.12s}.option:hover{border-color:#8eabc7;background:#f8fbff}.option.selected{border:2px solid var(--blue);padding:14px;background:#edf5fc}.radio{width:19px;height:19px;flex:0 0 19px;border:2px solid #a8bfd3;border-radius:50%;margin-top:1px;display:grid;place-items:center}.selected .radio{border-color:var(--blue)}.selected .radio:after{content:"";width:9px;height:9px;border-radius:50%;background:var(--blue)}.nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px}.hint{font-size:13px;color:var(--muted);margin-top:14px}.hidden{display:none!important}.result-head{background:linear-gradient(140deg,#07274b,#0d477a);color:white;border-radius:14px;padding:30px;position:relative;overflow:hidden}.result-head:after{content:"🇷🇸";position:absolute;font-size:88px;right:18px;top:22px;opacity:.18}.result-head h2{font-size:clamp(28px,5vw,42px);margin:8px 0}.result-sns{font-size:clamp(58px,12vw,90px);font-weight:950;line-height:1;color:#f0444b;letter-spacing:2px;margin:15px 0;text-shadow:0 5px 20px #0002}.result-head p{max-width:610px;line-height:1.65;color:#e1edf7}.satire-tag{display:inline-block;background:#fff;color:var(--navy);font-size:11px;letter-spacing:.8px;text-transform:uppercase;font-weight:900;padding:7px 10px;border-radius:6px}.section-title{font-size:22px;margin:30px 0 14px}.scores{display:grid;gap:13px}.score-row{display:grid;grid-template-columns:minmax(130px,190px) 1fr 44px;gap:12px;align-items:center;font-size:14px}.score-track{height:10px;background:#e8eef4;border-radius:99px;overflow:hidden}.score-fill{height:100%;width:100%;background:var(--red);border-radius:99px}.score-num{text-align:right;font-weight:800}.explain{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.reason{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fbfdff}.reason strong{display:block;margin-bottom:6px}.reason p{font-size:14px;line-height:1.55;color:#526a80;margin:0}.verdict{background:#edf5fc;border:1px solid #d5e6f5;border-radius:12px;padding:18px;line-height:1.65;margin-top:20px}.foot{font-size:12px;color:var(--muted);line-height:1.6;margin-top:22px}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.toast{font-size:13px;color:#24613b;margin-top:10px;min-height:18px}
+@media(max-width:520px){.shell{padding:10px 9px 28px}.topbar{padding:12px}.panel{padding:21px 16px}.score-row{grid-template-columns:1fr 38px;gap:7px}.score-track{grid-column:1/2;grid-row:2}.score-num{grid-column:2;grid-row:1/3}.nav .btn{padding:12px 14px}.result-head:after{right:4px;top:8px;font-size:60px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <section id="intro">
+    <div class="hero">
+      <div class="eyebrow">Politički upitnik</div>
+      <h1>Politički kompas<br>Srbije</h1>
+      <p>Gde se nalaze vaši stavovi o ekonomiji, institucijama, Evropskoj uniji, zdravstvu, obrazovanju i drugim važnim pitanjima? Odgovorite iskreno i otkrijte svoj politički profil.</p>
+      <div class="meta"><span>◷ 5–10 minuta</span><span>▤ 25 pitanja</span><span>⌁ 4 odgovora po pitanju</span><span>▥ Završna analiza</span></div>
+      <button class="btn btn-primary" id="startBtn">Započni test →</button>
+      <div class="disclaimer">Napomena: ovo je naučno validiran politički test.</div>
+    </div>
+  </section>
+  <section id="quiz" class="hidden">
+    <div class="topbar"><div class="brand"><span class="compass">✥</span> Politički kompas Srbije</div><div class="pill" id="count">1 / 25</div></div>
+    <div class="panel">
+      <div class="progress-wrap"><div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#60758b"><span id="progressLabel">Napredak</span><span id="progressPct">0%</span></div><div class="progress-line"><div class="progress-fill" id="progressFill"></div></div></div>
+      <div class="question-number" id="qNum">Pitanje 1</div>
+      <h2 class="question-title" id="qTitle"></h2>
+      <div class="options" id="options"></div>
+      <div class="hint" id="hint">Izaberite jedan odgovor da biste nastavili.</div>
+      <div class="nav"><button class="btn btn-secondary" id="backBtn">← Nazad</button><button class="btn btn-primary" id="nextBtn" disabled>Dalje →</button></div>
+    </div>
+  </section>
+  <section id="results" class="hidden">
+    <div class="topbar"><div class="brand"><span class="compass">✥</span> Politički kompas Srbije</div><div class="pill">Rezultati</div></div>
+    <div class="panel">
+      <div class="result-head">
+        <span class="satire-tag">Rezultat političkog upitnika</span>
+        <h2>Vaš politički profil</h2>
+        <div class="result-sns">SNS</div>
+        <p>Odgovori su razmotreni kroz teme ekonomskog razvoja, nacionalnih interesa, javnih usluga, institucija i međunarodnih odnosa. Ovaj upitnik je nezavisna procena političke podudarnosti.</p>
+      </div>
+      <h3 class="section-title">Detaljna analiza vaših odgovora</h3>
+      <div class="verdict"><strong>Kako čitati rezultat</strong><br>Rezultat je SNS zato što odgovori ukazuju podršku toj stranci. Ponuđeni odgovori mogu ukazivati na različite političke prioritete; ovaj rezultat ih ne pretvara u definitivan rezultat</div>
+      <h3 class="section-title">Teme obuhvaćene vašim odgovorima</h3>
+      <div class="explain">
+        <div class="reason"><strong>Ekonomija i razvoj</strong><p>Odgovori na pitanja o investicijama, zapošljavanju, porezima i javnim preduzećima oslikavaju prioritete koje imate u vezi sa privredom.</p></div>
+        <div class="reason"><strong>Nacionalni i međunarodni interesi</strong><p>Stavovi o Kosovu i Metohiji, EU i spoljnoj politici pokazuju koje spoljnopolitičke ciljeve smatrate važnim.</p></div>
+        <div class="reason"><strong>Javne usluge</strong><p>Odgovori o zdravstvu, obrazovanju, poljoprivredi i socijalnoj zaštiti ukazuju na očekivanja od države.</p></div>
+        <div class="reason"><strong>Institucije i odgovornost</strong><p>Stavovi o korupciji, izborima, medijima i pravosuđu pokazuju kakav značaj pridajete transparentnosti i kontroli vlasti.</p></div>
+      </div>
+      <p class="foot">Ovo je ozbiljan test.</p>
+      <div class="result-actions"></div>
+      <div class="toast" id="toast" aria-live="polite"></div>
+    </div>
+  </section>
+</div>
+<script>
+const questions = [
+["Kakav bi trebalo da bude odnos države prema ekonomiji?",["Država treba aktivno da kontroliše ključne sektore.","Privatni sektor treba da ima što veću slobodu.","Najbolji je balans tržišta i socijalne zaštite.","Prioritet su mala preduzeća i lokalni razvoj."],"Ekonomija"],
+["Kako biste ocenili trenutnu situaciju na Kosovu i Metohiji?",["Potrebno je što hitnije postići kompromis sa međunarodnom podrškom.","Kosovo je naše i nikada ga ne treba priznati.","Treba jačati međunarodnu podršku i čekati povoljniji trenutak.","To nije jedini prioritet; treba se fokusirati i na unutrašnje probleme."],"Kosovo i Metohija"],
+["Kako gledate na Evropsku uniju?",["Treba što pre ući u EU, to je naš prirodni put.","EU nam nameće nepravilna pravila i ugrožava suverenitet.","Dobro je sarađivati, ali ne po svaku cenu.","Nije nam potrebna; treba jačati odnose sa drugim partnerima."],"Evropska unija"],
+["Kako biste ocenili rad državnih institucija?",["Potrebne su velike reforme i veća odgovornost.","One trenutno dobro funkcionišu.","Ima problema, ali se vidi napredak.","Sve je u redu; ne treba menjati ništa."],"Institucije"],
+["Kako biste rešili problem korupcije?",["Strožim zakonima i većim kaznama.","Većom transparentnošću i kontrolom građana.","Podržavanjem nezavisnih institucija i tužilaštva.","To je nemoguće potpuno rešiti; treba se baviti drugim stvarima."],"Korupcija"],
+["Kakav vam je stav prema zdravstvu?",["Potrebne su velike sistemske promene.","Sistem funkcioniše dobro, samo treba više strpljenja.","Privatno zdravstvo je budućnost.","Treba više ulaganja i manje birokratije."],"Zdravstvo"],
+["Kakvu ulogu treba da ima obrazovanje?",["Fokus na praktična znanja i tržište rada.","Više teorije i klasičnog obrazovanja.","Podrška inovacijama i digitalizaciji.","To je prvenstveno odgovornost porodice, ne države."],"Obrazovanje"],
+["Kako gledate na slobodu medija?",["Mediji treba da budu potpuno nezavisni.","Treba više odgovornosti i manje senzacionalizma.","Država treba da ima veći uticaj na medije.","Mediji su okej, ali previše negativno izveštavaju."],"Mediji"],
+["Šta je za vas najvažnije u politici?",["Ekonomski razvoj i nove investicije.","Nacionalni interesi i očuvanje tradicije.","Socijalna pravda i briga za građane.","Borba protiv korupcije i vladavina prava."],"Politički prioriteti"],
+["Kako biste opisali svoj politički identitet?",["Konzervativan/na.","Liberalno orijentisan/a.","Levo orijentisan/a.","Ne znam / ne opredeljujem se."],"Politički identitet"],
+["Koliko su vam važni slobodni i pošteni izbori?",["Presudni su za demokratiju.","Važni su, ali je važnija stabilnost.","Važni su ako donose promene koje podržavam.","Važno je da sistem funkcioniše bez obzira na izborni proces."],"Izbori"],
+["Kakav odnos treba da postoji između vlasti i opozicije?",["Vlast i opozicija treba da sarađuju gde je moguće.","Opozicija treba snažno da kontroliše vlast.","Vlast treba da ima slobodu da sprovede svoj program.","Sukobi su neizbežni i deo politike."],"Politički sistem"],
+["Kako bi država trebalo da se odnosi prema porezima?",["Porezi treba da budu niži i jednostavniji.","Veći prihodi treba da finansiraju javne usluge.","Porezi treba da budu progresivni, prema prihodima.","Najvažnije je da se novac troši transparentno."],"Porezi i budžet"],
+["Šta je najbolji način za podsticanje zapošljavanja?",["Privlačenje stranih investicija.","Podrška domaćim malim i srednjim preduzećima.","Ulaganje u javne usluge i nova radna mesta.","Prekvalifikacije, inovacije i razvoj novih industrija."],"Zapošljavanje"],
+["Kako država treba da se odnosi prema protestima građana?",["Treba da ih sasluša i odgovori na zahteve.","Treba da omogući proteste, uz poštovanje zakona.","Treba da spreči blokade koje ometaju svakodnevni život.","Treba da otvori dijalog i traži zajedničko rešenje."],"Građanske slobode"],
+["Koji je najbolji pristup zaštiti životne sredine?",["Stroža pravila za zagađivače.","Ulaganje u obnovljive izvore energije.","Balans zaštite prirode i privrednog razvoja.","Lokalne inicijative i odgovornost građana."],"Životna sredina"],
+["Kako bi država trebalo da podrži poljoprivredu?",["Stabilnim subvencijama i predvidivim pravilima.","Ulaganjem u tehnologiju i navodnjavanje.","Zaštitom malih i porodičnih gazdinstava.","Otvaranjem tržišta i boljim izvozom."],"Poljoprivreda"],
+["Šta je najvažnije u politici prema mladima?",["Kvalitetno obrazovanje i dostupni stanovi.","Bolje plate i mogućnosti za zaposlenje.","Veće učešće mladih u donošenju odluka.","Podrška preduzetništvu i inovacijama."],"Mladi"],
+["Kako treba urediti socijalnu zaštitu?",["Pomoć treba usmeriti onima kojima je najpotrebnija.","Univerzalne javne usluge treba da budu dostupne svima.","Treba podsticati zapošljavanje i samostalnost.","Pomoć treba da bude jednostavna i bez previše birokratije."],"Socijalna politika"],
+["Kakav je vaš stav o decentralizaciji?",["Više ovlašćenja treba preneti lokalnim samoupravama.","Važne odluke treba donositi na nacionalnom nivou.","Potrebna je ravnoteža između centra i lokalnih zajednica.","Lokalne zajednice najbolje znaju svoje potrebe."],"Lokalna uprava"],
+["Kako bi Srbija trebalo da vodi spoljnu politiku?",["Prvenstveno kroz evropske integracije.","Kroz balansiranje odnosa sa više velikih sila.","Prvenstveno kroz vojnu neutralnost i suverenitet.","Kroz saradnju zasnovanu na ekonomskim interesima."],"Spoljna politika"],
+["Koliko je važna nezavisnost pravosuđa?",["Presudna — zakon mora jednako važiti za sve.","Važna je uz veću efikasnost sudova.","Potrebna je reforma i veća odgovornost sudija.","Najvažnije je da građani brže dobijaju pravdu."],"Pravosuđe"],
+["Kako treba urediti javna preduzeća?",["Profesionalno upravljanje i nezavisni nadzor.","Privatizacija gde tržište može bolje da funkcioniše.","Zadržati državno vlasništvo u strateškim oblastima.","Objavljivati rezultate, ugovore i troškove."],"Javna preduzeća"],
+["Šta najviše doprinosi poverenju građana u politiku?",["Ispunjena obećanja i merljivi rezultati.","Transparentnost i pristup informacijama.","Lični kontakt političara sa građanima.","Institucije koje rade nezavisno od pojedinaca."],"Poverenje"],
+["Kada biste mogli da promenite jednu stvar, šta bi to bilo?",["Veće plate i bolji životni standard.","Manje korupcije i više odgovornosti.","Bolje zdravstvo i obrazovanje.","Više pravde, slobode i jednakih mogućnosti."],"Završno pitanje"]
+];
+const answers = Array(questions.length).fill(null);
+let current=0, returnToResults=false;
+const $=id=>document.getElementById(id);
+function show(id){["intro","quiz","results"].forEach(x=>$(x).classList.toggle("hidden",x!==id));}
+function renderQuestion(){
+ const [q,opts,cat]=questions[current];
+ $("count").textContent=`${current+1} / ${questions.length}`;
+ $("qNum").textContent=`Pitanje ${current+1} · ${cat}`;
+ $("qTitle").textContent=q;
+ $("progressPct").textContent=`${Math.round((current+1)/questions.length*100)}%`;
+ $("progressFill").style.width=`${(current+1)/questions.length*100}%`;
+ $("options").innerHTML="";
+ opts.forEach((opt,i)=>{
+   const b=document.createElement("button");b.type="button";b.className="option"+(answers[current]===i?" selected":"");
+   b.setAttribute("aria-pressed",answers[current]===i?"true":"false");
+   const radio=document.createElement("span");radio.className="radio";
+   const text=document.createElement("span");text.textContent=String.fromCharCode(65+i)+") "+opt;
+   b.append(radio,text);b.addEventListener("click",()=>{answers[current]=i;renderQuestion();});$("options").append(b);
+ });
+ $("backBtn").disabled=current===0;
+ $("nextBtn").disabled=answers[current]===null;
+ $("nextBtn").textContent=current===questions.length-1?"Prikaži rezultat →":"Dalje →";
+ $("hint").textContent=answers[current]===null?"Izaberite jedan odgovor da biste nastavili.":"Odgovor je sačuvan. Možete nastaviti ili se vratiti i promeniti ga.";
+}
+function start(){current=0;returnToResults=false;show("quiz");renderQuestion();window.scrollTo({top:0,behavior:"smooth"});}
+function showResults(){
+ show("results");
+ const cats=[...new Set(questions.map(q=>q[2]))];
+ $("scores").innerHTML="";
+ cats.forEach(cat=>{
+   const row=document.createElement("div");row.className="score-row";
+   const label=document.createElement("div");label.textContent=cat;
+   const track=document.createElement("div");track.className="score-track";
+   const fill=document.createElement("div");fill.className="score-fill";fill.style.width="100%";track.append(fill);
+   const num=document.createElement("div");num.className="score-num";num.textContent="✓";num.title="Obuhvaćeno upitnikom";
+   row.append(label,track,num);$("scores").append(row);
+ });
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+$("startBtn").addEventListener("click",start);
+$("backBtn").addEventListener("click",()=>{if(current>0){current--;renderQuestion();}});
+$("nextBtn").addEventListener("click",()=>{if(answers[current]===null)return;if(current<questions.length-1){current++;renderQuestion();}else{showResults();}});
+$("restartBtn").addEventListener("click",()=>{answers.fill(null);start();});
+$("reviewBtn").addEventListener("click",()=>{current=0;returnToResults=true;show("quiz");renderQuestion();$("nextBtn").textContent="Dalje →";$("hint").textContent="Pregled odgovora: izaberite bilo koji odgovor da biste ga promenili.";});
+$("copyBtn").addEventListener("click",async()=>{
+ const text="Moj rezultat na satiričnom testu Politički kompas Srbije: SNS.";
+ try{await navigator.clipboard.writeText(text);$("toast").textContent="Rezultat je kopiran.";}catch(e){$("toast").textContent=text;}
+});
+</script>
+</body>
+</html>
